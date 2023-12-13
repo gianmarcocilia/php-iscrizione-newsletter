@@ -1,6 +1,5 @@
 <?php 
-include __DIR__ . '/functions.php';
-check_email();
+include_once __DIR__ . '/functions.php';
 ?>
 
 <!DOCTYPE html>
@@ -10,14 +9,18 @@ check_email();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
-    <form action="index.php" method="POST">
+<div class="container">
+    <form action="index.php" method="POST" class="text-center mt-5">
         <label for="email">Inserisci una e-mail</label>
         <input type="text" name="email" id="email">
         <button type="submit">Invia</button>
     </form>
+    <?php check_email(); ?>
+    </div>
 </body>
 
 </html>
