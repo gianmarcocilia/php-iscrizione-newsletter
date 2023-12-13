@@ -1,12 +1,6 @@
 <?php 
-if(isset($_POST['email'])) {
-    $mail = $_POST['email'];
-    if(str_contains($mail, '@') && str_contains($mail, '.')) {
-        echo 'mail valida';
-    } else {
-        echo 'mail non valida';
-    }
-}
+include __DIR__ . '/functions.php';
+check_email();
 ?>
 
 <!DOCTYPE html>
