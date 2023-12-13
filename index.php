@@ -1,5 +1,10 @@
 <?php 
 include_once __DIR__ . '/functions.php';
+session_start();
+if (isset($_SESSION['verified']) && $_SESSION['verified'] === true) {
+    header('Location: ./thankyou.php');
+    die;
+}
 ?>
 
 <!DOCTYPE html>

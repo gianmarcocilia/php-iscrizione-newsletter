@@ -6,8 +6,12 @@
             $mail = $_POST['email'];
             if (str_contains($mail, '@') && str_contains($mail, '.')) { ?>
                 <h3 class="alert-success p-1 my-2">Mail valida</h3>
+                <?php
+                $_SESSION['verified'] = true;
+                header('Location: ./thankyou.php');?>
             <?php } else { ?>
                 <h3 class="alert-danger p-1 my-2">Mail non valida</h3>
     <?php  }
         }
-    } ?>
+    } 
+    ?>
