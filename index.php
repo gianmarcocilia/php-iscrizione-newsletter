@@ -21,7 +21,7 @@ if (isset($_SESSION['verified']) && $_SESSION['verified'] === true) {
 <div class="container">
     <form action="index.php" method="POST" class="text-center mt-5">
         <label for="email">Inserisci una e-mail</label>
-        <input type="text" name="email" id="email">
+        <input type="text" name="email" id="email" value="<?php if(isset($_POST['email']) && $_SESSION['verified'] === false) {echo $_POST['email'];}?>">
         <button type="submit">Invia</button>
     </form>
     <?php check_email(); ?>

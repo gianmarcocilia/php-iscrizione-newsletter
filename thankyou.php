@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         <h1 class="text-center text-success mt-5">La Mail inserita è corretta! Complimenti!!</h1>
+        <a href="./logout.php" class="btn btn-primary">Esci</a>
     </div>
 </body>
 </html>
